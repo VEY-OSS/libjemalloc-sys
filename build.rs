@@ -1,5 +1,6 @@
 use std::env;
 use std::path::PathBuf;
+
 use bindgen::{MacroTypeVariation, RustEdition};
 
 fn main() {
@@ -13,7 +14,9 @@ fn main() {
         builder = builder.clang_arg(format!("-I{}", dir.display()));
     }
     let bindings = builder
-        .header("wrapper.h").rust_edition(RustEdition::Edition2024).default_macro_constant_type(MacroTypeVariation::Signed)
+        .header("wrapper.h")
+        .rust_edition(RustEdition::Edition2024)
+        .default_macro_constant_type(MacroTypeVariation::Signed)
         .allowlist_file(".*jemalloc.h")
         .generate()
         .expect("Unable to generate bindings");
