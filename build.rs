@@ -42,5 +42,6 @@ fn probe_installed() -> Option<Vec<PathBuf>> {
         return Some(lib.include_paths);
     }
 
+    println!("cargo:warning=Could not find Jemalloc using pkg-config or vcpkg");
     None
 }
