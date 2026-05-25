@@ -1,10 +1,10 @@
 [package]
-name = "libjemalloc-sys"
+name = "vey-jemalloc-sys"
 version = "0.1.4"
 edition = "2024"
 links = "jemalloc"
 license = "Apache-2.0"
-repository = "https://github.com/VEY-OSS/libjemalloc-sys.git"
+repository = "https://github.com/VEY-OSS/jemalloc-sys.git"
 readme = "README.md"
 description = "A simple bind to jemalloc"
 
